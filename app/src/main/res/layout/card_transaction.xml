@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/event_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        card_view:cardElevation="6dp"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:contentPadding="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/payment_picture"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"/>
+
+            <ImageView
+                android:id="@+id/payment_picture1"
+                android:layout_below="@id/payment_picture"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"/>
+
+            <RelativeLayout
+                android:layout_toEndOf="@id/payment_picture"
+                android:layout_margin="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/payment_details"
+                    android:text="Neville Payed Vishal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/transaction_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@id/payment_details"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_marginStart="6dp"
+                    android:text="$12"/>
+
+                <TextView
+                    android:id="@+id/payment_description"
+                    android:layout_below="@id/payment_details"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/black_overlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="For Groceries"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>
